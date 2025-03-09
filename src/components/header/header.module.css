@@ -1,0 +1,74 @@
+/* Container and Wrapper */
+.headerContainer {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .headerWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  /* Left section with logo and social links */
+  .headerLeft {
+    position: relative;
+  }
+  
+  .socialLinks {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #333;
+    padding: 8px;
+    border-radius: 4px;
+    transition: 1.5s;
+
+  }
+  
+  .headerLeft:hover .socialLinks {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+    transition: 1.5s;
+  }
+  
+  /* Burger menu styling */
+  .burger {
+    cursor: pointer;
+    font-size: 30px;
+    display: block; /* Always visible on all screen sizes */
+    padding: 10px;
+  }
+  
+  /* Right Section */
+  .headerRight {
+    display: flex;
+    gap: 40px;
+  }
+  
+  /* Nav item styling */
+  .navItem {
+    text-decoration: none;
+    color: white;
+  }
+  
+  /* Adjust navigation layout on smaller screens */
+  @media (max-width: 768px) {
+    .headerRight {
+      display: none; /* Hide nav on mobile initially */
+    }
+  
+    .menuOpen {
+      display: flex; /* Show menu on mobile when burger is clicked */
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      background: #222;
+      padding: 10px;
+      border-radius: 4px;
+    }
+  }
+  
